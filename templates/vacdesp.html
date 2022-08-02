@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Patient Control</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/myfunc.js"></script>
+
+
+
+</head>
+
+<body>
+<form name="principal"  method="post" onsubmit="return false;" >
+    <!--This is the Main Menu   -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Patient Control</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" style="border-style: none;">                
+                <h1>Vacunas / Desparacitaciones</h1>
+            </div>   
+        </div>
+        <div class="row">    
+            <div class="col-md-9" style="border-radius: 10px; border-style: none; border-width: 1px;">
+            <br>
+                    <div class="row" style="border-style: none;">
+                        <div class="col-md-3 col-md-offset-0 ">
+                            <table style="width:100%">
+                                <tr><th style="text-align: center;" >ultima consulta</th> </tr>
+                                <tr><td style="text-align: center;"><label id="lblultcons">no se cuando fue</label></td></tr>
+                            </table>
+                        </div>
+                        <div class="col-md-5 col-md-offset-0 ">
+                            <table style="width:100%">
+                                <tr><th style="text-align: center;" >Paciente</th> </tr>
+                                <tr><td style="text-align: center;"><label id="lblultcons">La Chatona de tu radio</label></td></tr>
+                            </table>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0" style="padding-top: 2rem;">
+                            <input type="submit" name="btnupdate" id="btnupdate" class="btn btn-warning" value="Update" onclick="" >
+                            <input type="submit" name="btndelete" id="btndelete" class="btn btn-danger" value="Delete">
+                            <input type="submit" name="btnback" id="btnback" class="btn btn-primary" value="Back">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-1" style="border-radius: 10px; border-style: none; border-width: 1px;">
+                            <label>Tipo</label>
+                        </div>                     
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-1" style="border-radius: 10px; border-style: none; border-width: 1px;"></div>
+                        <div class="col-md-3 col-md-offset-0" style="border-radius: 10px; border-style: none; border-width: 1px;">
+                                <input type="radio" id="male" name="gender" value="2">
+                                <label for="male">Desparacitacion</label>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0" style="border-radius: 10px; border-style: none; border-width: 1px;">
+                                <input type="radio" id="female" name="gender" value="1">
+                                <label for="female">Vacuna</label>
+                        </div>                        
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2" style="border-style: none;">
+                            <label>Peso</label>
+                            <input type="text" name="txtowner" id="owner" class="form-control" placeholder="Peso" style="text-align:center;">
+                        </div>
+                        <div class="col-md-2" style="border-style: none;">
+                            <label>Temperatura</label>
+                            <input type="text" name="txtowner" id="owner" class="form-control" placeholder="Temperatura" style="text-align:center;">
+                        </div>
+                        <div class="col-md-4" style="border-style: none;">
+                            <label>Producto Utilizado</label>
+                            <input type="text" name="txtowner" id="owner" class="form-control" placeholder="Producto Utilizado" style="text-align:center;">
+                        </div>
+                        <div class="col-md-3" style="border-style: none;">
+                            <label>Proxima</label>
+                            <input type="date" name="txtowner" id="owner" class="form-control" placeholder="Proxima" style="text-align:center;" >
+                        </div>                                                                        
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12" style="border-style: none;">
+                            <label>Observaciones</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="border-style: none;">
+                            <textarea onkeyup="checkme(this);" onkeypress="checkme(this);" name="plan" COLS=100 ROWS=10 id="txtplan"
+                                maxlenght="300" runat="server" ></TEXTAREA>
+                        </div>
+                    </div><br>
+                    <div class="row" style="border-style: none;">
+                        <div class="col-md-2 col-md-offset-1 "></div>
+                        <div class="col-md-6 col-md-offset-0 ">
+                            <input type="submit" name="btnsave" id="btnsave" class="btn btn-primary" value="Guardar" style="width: 170px;display: none;" onclick="updatecons(1)">
+                            <input type="submit" name="btncancel" id="btncancel" class="btn btn-danger" value="Cancel" style="width: 170px;display: none;"  onclick="clearform(2)" >
+                        </div>
+                        <div class="col-md-2 col-md-offset-0 "></div>
+                    </div>
+                
+            </div>
+        </div>
+                
+
+        <div class="row">
+            <br>
+            <footer>
+                <p>&copy; 2021 - design by Joel Gonzalez</p>
+            </footer>
+        </div>
+
+    </div>
+
+</form>
+
+</body>
+
+</html>
